@@ -33,15 +33,15 @@ export function LoginForm({ className, ...props }: React.ComponentProps<"div">) 
       // Llamamos al backend para login
       const data = await loginUser({ username: form.username, password: form.password });
 
-      // Guardamos tokens en localStorage
-      localStorage.setItem("accessToken", data.access);
-      localStorage.setItem("refreshToken", data.refresh);
+      document.cookie = `access_token=${data.access}; path=/;`;
+      document.cookie = `refresh_token=${data.refresh}; path=/;`;
+
+      router.push("/gastos");
 
       // Mostramos mensaje de éxito (opcional)
       setMessage("Login exitoso!");
 
-      // Redirigimos al dashboard
-      router.push("/dashboard");
+
     } catch (err) {
       setMessage("Hubo un error al intentar iniciar sesión. Revisa tu correo o contraseña.");
     }

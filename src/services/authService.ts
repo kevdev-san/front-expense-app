@@ -1,4 +1,3 @@
-import { error } from "console";
 
 const API_URL = "http://127.0.0.1:8000/api"; //Aqui definimos la url de nuestro backend
 
