@@ -116,7 +116,7 @@ export default function GastosClient({ initialGastos, token }: GastosClientProps
                     <DialogHeader>
                         <DialogTitle>¿Eliminar gasto?</DialogTitle>
                         <DialogDescription>
-                            ¿Estás seguro de que deseas eliminar el gasto "{gastoAEliminar?.title}"?
+                            ¿Estás seguro de que deseas eliminar el gasto &quot;{gastoAEliminar?.title}&quot;?
                             Esta acción no se puede deshacer.
                         </DialogDescription>
                     </DialogHeader>
